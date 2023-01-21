@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transcribe</title>
+</head>
+<body>
+<h1>Transcribe</h1>
+<form method="post" action="{{url_for('find_files')}}" enctype="multipart/form-data">
+  <input type="file" value="file" name="audio">
+  <input type="submit" value="Submit">
+</form>
+
+<h1>Previous Transcriptions</h1>
+<p>{{"\n\n\n".join(transciptions)}}</p>
+</body>
+</html>
